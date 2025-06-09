@@ -18,7 +18,10 @@ import tempfile
 import pickle
 
 # Load environment variables
-load_dotenv()
+import streamlit as st
+
+# Get API key from Streamlit Secrets
+HUGGINGFACEHUB_API_TOKEN = st.secrets["HUGGINGFACEHUB_API_TOKEN"]
 
 # Page configuration
 st.set_page_config(
